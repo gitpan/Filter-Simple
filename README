@@ -1,5 +1,5 @@
 ==============================================================================
-                  Release of version 0.75 of Filter::Simple
+                  Release of version 0.76 of Filter::Simple
 ==============================================================================
 
 
@@ -46,14 +46,11 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 0.75
+CHANGES IN VERSION 0.76
 
 
-	- Corified tests (thanks Jarkko)
-
-	- Added automatic preservation of existing &import subroutines
-
-	- Added automatic preservation of Exporter semantics 
+	- Modified call to explicit &import so as to be invoked in original 
+	  call context
 
 
 ==============================================================================

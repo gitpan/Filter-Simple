@@ -9,4 +9,4 @@ BEGIN { print "1..4\n" }
 
 use ImportTest (1..3);
 
-print "not ok 4\n";
+say "not ok 4\n";

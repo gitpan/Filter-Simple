@@ -4,7 +4,7 @@ use Text::Balanced ':ALL';
 
 use vars qw{ $VERSION @EXPORT };
 
-$VERSION = '0.75';
+$VERSION = '0.76';
 
 use Filter::Util::Call;
 use Carp;
@@ -115,7 +115,6 @@ sub gen_std_filter_for {
 			s/$extractor/${$pieces[unpack('N',$1)]}/g;
 		     }
 		     else {
-			$DB::single=1;
 		        my $selector = $selector_for{$type}->($transform);
 		        $_ = join "", map $selector->(@_), @pieces;
 		     }
@@ -123,7 +122,6 @@ sub gen_std_filter_for {
 };
 
 sub FILTER_ONLY {
-	$DB::single = 1;
 	my $caller = caller;
 	while (@_ > 1) {
 		my ($what, $how) = splice(@_, 0, 2);
@@ -183,7 +181,6 @@ sub gen_filter_import {
 				$count++;
 				$_ = "";
 			}
-			$DB::single=1;
 			$_ = $data;
 			$filter->($imported_class, @args) unless $status < 0;
 			if (defined $lastline) {
@@ -198,7 +195,7 @@ sub gen_filter_import {
 		}
 	);
 	if ($prev_import) {
-		$prev_import->(@_);
+		goto &$prev_import;
 	}
 	elsif ($class->isa('Exporter')) {
 		$class->export_to_level(1,@_);
@@ -211,7 +208,7 @@ sub gen_filter_unimport {
 	my $prev_unimport = *{$class."::unimport"}{CODE};
 	return sub {
 		filter_del();
-		$prev_unimport->() if $prev_unimport;
+		goto &$prev_unimport if $prev_unimport;
 	}
 }
 
