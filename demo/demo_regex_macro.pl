@@ -1,4 +1,3 @@
-BEGIN {$DEBUG=1}
 use Demo_REM;
 
 =head1 A demo

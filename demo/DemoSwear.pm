@@ -1,4 +1,5 @@
 package DemoSwear;
+$VERSION = '0.01';
 use Regexp::Common;
 
 use Filter::Simple;

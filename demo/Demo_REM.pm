@@ -1,4 +1,5 @@
 package Demo_REM;
+$VERSION = '0.01';
 
 use Filter::Simple;
 use Regexp::Common;

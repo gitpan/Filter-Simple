@@ -4,14 +4,19 @@ MANIFEST
 Makefile.PL
 lib/FilterTest.pm
 lib/FilterOnlyTest.pm
+lib/ImportTest.pm
+lib/ExportTest.pm
 t/filter.t
 t/filter_only.t
 t/data.t
+t/import.t
+t/export.t
 demo/Demo1.pm
 demo/Demo2a.pm
 demo/Demo2b.pm
 demo/DemoSwear.pm
 demo/Demo_Exporter.pm
+demo/Demo_Importer.pm
 demo/Demo_REM.pm
 demo/DemoData.pm
 demo/DemoRevCat.pm
@@ -20,6 +25,7 @@ demo/Demo_Data.pm
 demo/demo.pl
 demo/demo2.pl
 demo/demo_exporter.pl
+demo/demo_importer.pl
 demo/demo_regex_macro.pl
 demo/demo_swear.pl
 demo/demo_data.pl

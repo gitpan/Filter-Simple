@@ -1,4 +1,5 @@
 package Demo_Exporter;
+$VERSION = '0.01';
 
 use Filter::Simple;
 use base Exporter;
@@ -11,5 +12,4 @@ sub bar { print "bar\n" }
 
 FILTER {
 	s/dye/die/g;
-	__PACKAGE__->export_to_level(2,@_);
 }

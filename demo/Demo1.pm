@@ -1,4 +1,5 @@
 package Demo1;
+$VERSION = '0.01';
 
 use Filter::Simple sub {
 	my $class = shift;
