@@ -33,3 +33,4 @@ demo/demo_data.pl
 demo/demo_dots.pl
 demo/demo_revcat.pl
 demo/demo_unpod.pl
+META.yml                                 Module meta-data (added by MakeMaker)

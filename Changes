@@ -79,3 +79,10 @@ Revision history for Perl extension Filter::Simple
 	- added prereq for Text::Balanced in Makefile.PL
 
 	- Added note about use of /m flag when using ^ or $ in filter regexes
+
+0.79    Sat Sep 20 21:56:24 2003
+
+        - Fixed tests to use t/lib modules so F::S is testable without
+          a previous version of F::S installed. (schwern)
+
+
