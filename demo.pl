@@ -1,6 +1,6 @@
 use Demo1 qr/bill/i => "William", is => 'was' ;
 
-sub bill { print "My name is Bill\n"; "named" }
+sub bill { print "My name is Bill\n"; "explicitly named" }
 
 bill();
 &bill;

@@ -1,5 +1,5 @@
 ==============================================================================
-                  Release of version 0.50 of Filter::Simple
+                  Release of version 0.60 of Filter::Simple
 ==============================================================================
 
 
@@ -9,19 +9,26 @@ NAME
 SYNOPSIS
      # in MyFilter.pm:
 
-	     package MyFilter;
+	 package MyFilter;
 
-	     use Filter::Simple sub { ... };
+	 use Filter::Simple;
+	 
+	 FILTER { ... };
+
+	 # or just:
+	 #
+	 # use Filter::Simple sub { ... };
+
 
      # in user's code:
 
-	     use MyFilter;
+	 use MyFilter;
 
-	     # this is filtered
+	 # this is filtered
 
-	     no MyFilter;
+	 no MyFilter;
 
-	     # this is not
+	 # this is not
 
 
 DESCRIPTION
@@ -40,9 +47,18 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 0.50
+CHANGES IN VERSION 0.60
 
-(No changes have been documented for this version)
+
+	- Fixed POD nit (thanks Dean)
+
+	- Added optional second argument to import to allow
+	  terminator to be changed (thanks Brad)
+
+	- Fixed bug when empty filtered text was appended to (thanks Brad)
+
+	- Added FILTER as the normal mechanism for specifying filters
+
 
 ==============================================================================
 
