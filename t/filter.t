@@ -1,4 +1,5 @@
 use FilterTest qr/not ok/ => "ok", fail => "ok";
+
 print "1..6\n";
 
 sub fail { print "fail ", $_[0], "\n" }

@@ -1,3 +1,5 @@
+no warnings;
+
 use Demo2b;
 
 $x = 1;
