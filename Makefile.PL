@@ -1,8 +1,8 @@
 
 use ExtUtils::MakeMaker;
 WriteMakefile(
-		NAME	=> 'Filter::Simple',
-		VERSION => '0.77',
-		PREREQ_PM => { Filter::Util::Call => 0 },
+		NAME	=> q[Filter::Simple],
+		VERSION => q[0.78],
+		PREREQ_PM => { Text::Balanced => 0, Filter::Util::Call => 0 },
 
 	     );
