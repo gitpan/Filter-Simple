@@ -1,0 +1,8 @@
+Revision history for Perl extension Filter.
+
+0.01  Tue Sep 19 20:18:44 2000
+	- original version; created by h2xs 1.18
+
+0.01	Tue Sep 26 09:30:14 2000
+
+	- Changed module name to Filter::Simple
