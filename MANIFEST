@@ -2,9 +2,10 @@ Changes
 lib/Filter/Simple.pm
 MANIFEST
 Makefile.PL
-test.pl
-Demo1.pm
-Demo2a.pm
-Demo2b.pm
-demo.pl
-demo2.pl
+lib/FilterTest.pm
+t/filter.t
+demo/Demo1.pm
+demo/Demo2a.pm
+demo/Demo2b.pm
+demo/demo.pl
+demo/demo2.pl

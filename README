@@ -1,5 +1,5 @@
 ==============================================================================
-                  Release of version 0.60 of Filter::Simple
+                  Release of version 0.61 of Filter::Simple
 ==============================================================================
 
 
@@ -39,26 +39,16 @@ AUTHOR
     Damian Conway (damian@conway.org)
 
 COPYRIGHT
-    Copyright (c) 2000, Damian Conway. All Rights Reserved. This module
-    is free software. It may be used, redistributed and/or modified under
-    the terms of the Perl Artistic License
-    (see http://www.perl.com/perl/misc/Artistic.html)
+    Copyright (c) 2000-2001, Damian Conway. All Rights Reserved.
+    This module is free software. It may be used, redistributed
+        and/or modified under the same terms as Perl itself.
 
 
 ==============================================================================
 
-CHANGES IN VERSION 0.60
+CHANGES IN VERSION 0.61
 
-
-	- Fixed POD nit (thanks Dean)
-
-	- Added optional second argument to import to allow
-	  terminator to be changed (thanks Brad)
-
-	- Fixed bug when empty filtered text was appended to (thanks Brad)
-
-	- Added FILTER as the normal mechanism for specifying filters
-
+(No changes have been documented for this version)
 
 ==============================================================================
 

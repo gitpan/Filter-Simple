@@ -18,3 +18,15 @@ Revision history for Perl extension Filter::Simple
 	- Fixed bug when empty filtered text was appended to (thanks Brad)
 
 	- Added FILTER as the normal mechanism for specifying filters
+
+
+0.61	Mon Sep  3 08:25:21 2001
+
+	- Added a real test suite (thanks Jarkko)
+
+	- Changed licence to facilitate inclusion in
+	  core distribution
+
+	- Added documentation for using F::S and Exporter together
+
+
