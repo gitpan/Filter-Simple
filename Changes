@@ -59,3 +59,8 @@ Revision history for Perl extension Filter::Simple
 
 	- Modified call to explicit &import so as to be invoked in original 
 	  call context
+
+
+0.77	Sat Nov 24 06:48:47 2001
+
+	- Re-allowed user-defined terminators to be regexes

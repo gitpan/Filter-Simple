@@ -4,7 +4,7 @@ use Text::Balanced ':ALL';
 
 use vars qw{ $VERSION @EXPORT };
 
-$VERSION = '0.76';
+$VERSION = '0.77';
 
 use Filter::Util::Call;
 use Carp;
@@ -148,22 +148,23 @@ my $ows    = qr/(?:[ \t]+|#[^\n]*)*/;
 
 sub gen_filter_import {
     my ($class, $filter, $terminator) = @_;
+    my %terminator;
     my $prev_import = *{$class."::import"}{CODE};
     return sub {
 	my ($imported_class, @args) = @_;
 	my $def_terminator =
 		qr/^(?:\s*no\s+$imported_class\s*;$ows|__(?:END|DATA)__)$/;
 	if (!defined $terminator) {
-	    $terminator->{terminator} = $def_terminator;
+	    $terminator{terminator} = $def_terminator;
 	}
-	elsif (!ref $terminator) {
-	    $terminator->{terminator} = $terminator;
+	elsif (!ref $terminator || ref $terminator eq 'Regexp') {
+	    $terminator{terminator} = $terminator;
 	}
 	elsif (ref $terminator ne 'HASH') {
 	    croak "Terminator must be specified as scalar or hash ref"
 	}
 	elsif (!exists $terminator->{terminator}) {
-	    $terminator->{terminator} = $def_terminator;
+	    $terminator{terminator} = $def_terminator;
 	}
 	filter_add(
 		sub {
@@ -172,8 +173,8 @@ sub gen_filter_import {
 			my $data = "";
 			while ($status = filter_read()) {
 				return $status if $status < 0;
-				if ($terminator->{terminator} &&
-				    m/$terminator->{terminator}/) {
+				if ($terminator{terminator} &&
+				    m/$terminator{terminator}/) {
 					$lastline = $_;
 					last;
 				}
@@ -184,8 +185,8 @@ sub gen_filter_import {
 			$_ = $data;
 			$filter->($imported_class, @args) unless $status < 0;
 			if (defined $lastline) {
-				if (defined $terminator->{becomes}) {
-					$_ .= $terminator->{becomes};
+				if (defined $terminator{becomes}) {
+					$_ .= $terminator{becomes};
 				}
 				elsif ($lastline =~ $def_terminator) {
 					$_ .= $lastline;

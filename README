@@ -1,5 +1,5 @@
 ==============================================================================
-                  Release of version 0.76 of Filter::Simple
+                  Release of version 0.77 of Filter::Simple
 ==============================================================================
 
 
@@ -46,11 +46,10 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 0.76
+CHANGES IN VERSION 0.77
 
 
-	- Modified call to explicit &import so as to be invoked in original 
-	  call context
+	- Re-allowed user-defined terminators to be regexes
 
 
 ==============================================================================
