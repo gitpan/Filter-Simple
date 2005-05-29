@@ -1,0 +1,71 @@
+==============================================================================
+                  Release of version 0.80 of Filter::Simple
+==============================================================================
+
+
+NAME
+    Filter::Simple - Simplified source filtering
+
+SYNOPSIS
+     # in MyFilter.pm:
+
+	 package MyFilter;
+
+	 use Filter::Simple;
+	 
+	 FILTER { ... };
+
+	 # or just:
+	 #
+	 # use Filter::Simple sub { ... };
+
+
+     # in user's code:
+
+	 use MyFilter;
+
+	 # this is filtered
+
+	 no MyFilter;
+
+	 # this is not
+
+
+DESCRIPTION
+    The Filter::Simple module provides a simplified interface to
+    Filter::Util::Call; one that is sufficient for most common cases.
+
+AUTHOR
+    Damian Conway (damian@conway.org)
+
+COPYRIGHT
+    Copyright (c) 2000-2001, Damian Conway. All Rights Reserved.
+    This module is free software. It may be used, redistributed
+        and/or modified under the same terms as Perl itself.
+
+
+==============================================================================
+
+CHANGES IN VERSION 0.80
+
+
+	- Added Sarathy's patch for \r\n newlinery (thanks Jarkko)
+
+	- Added recognition of comments as whitespace (thanks Jeff)
+
+    - Added @components variable (thanks Dean)
+
+    - Fixed handling of vars in FILTER_ONLY code=>... (thanks Lasse)
+
+    - Fixed spurious extra filter at end of file (thanks Dean)
+
+    - Added INSTALLDIRS=>core to Makefile.PL
+
+
+==============================================================================
+
+AVAILABILITY
+
+Filter::Simple has been uploaded to the CPAN
+
+==============================================================================
