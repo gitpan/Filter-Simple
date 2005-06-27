@@ -4,7 +4,7 @@ use Text::Balanced ':ALL';
 
 use vars qw{ $VERSION @EXPORT };
 
-$VERSION = '0.80';
+$VERSION = '0.82';
 
 use Filter::Util::Call;
 use Carp;
