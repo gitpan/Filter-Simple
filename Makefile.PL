@@ -1,9 +1,16 @@
-
+use strict;
 use ExtUtils::MakeMaker;
 WriteMakefile(
-		NAME	=> q[Filter::Simple],
-		VERSION => q[0.82],
-        INSTALLDIRS => q[perl],
-		PREREQ_PM => { Text::Balanced => 0, Filter::Util::Call => 0 },
-
-	     );
+  NAME          => 'Filter::Simple',
+  VERSION_FROM  => 'lib/Filter/Simple.pm',
+  INSTALLDIRS   => 'perl',
+  'LICENSE'     => 'perl',
+  'INSTALLDIRS' => 'perl',
+  ($] >= 5.005 ?
+  (ABSTRACT_FROM => 'lib/Filter/Simple.pm',
+   'AUTHOR'      => 'Damian Conway') : ()),
+  PREREQ_PM     => {
+    'Text::Balanced' => 0,
+    'Filter::Util::Call' => 0
+  },
+);
